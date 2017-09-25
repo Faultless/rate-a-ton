@@ -1,11 +1,14 @@
 import axios, { AxiosResponse } from 'axios';
+import { API_KEY } from '../config';
 
 export const getHeroes = async (): Promise<AxiosResponse> =>
   await axios.get(
-    'http://private-c7981ed-superheroes.apiary-mock.com/characters/',
+    `https://gateway.marvel.com/v1/public/characters?orderBy=name&limit=10&apikey=${API_KEY}`,
   );
 
-export const getHeroById = async (id: string): Promise<AxiosResponse> =>
+export const getHeroById = async (
+  characterId: string,
+): Promise<AxiosResponse> =>
   await axios.get(
-    `http://private-c7981ed-superheroes.apiary-mock.com/characters/${id}`,
+    `https://gateway.marvel.com/v1/public/characters/${characterId}?apikey=${API_KEY}`,
   );

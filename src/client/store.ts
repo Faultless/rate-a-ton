@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux';
 import characters from './reducers/characters';
-import selectedCharacter from './reducers/selectedCharacter';
+import selectedCharacter from './reducers/selected-character';
 
 const reducer = combineReducers({ characters, selectedCharacter });
 

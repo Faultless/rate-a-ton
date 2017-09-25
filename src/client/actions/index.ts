@@ -1,13 +1,13 @@
-export const fetchCharacters = (Characters: Array<Object>) => {
+export const fetchCharacters = (characters: Array<Object>) => {
   return {
     type: 'FETCH_CHARACTERS',
-    payload: { Characters },
+    payload: { characters },
   };
 };
 
-export const fetchCharacter = (SelectedCharacter: Object) => {
+export const fetchCharacter = (selectedCharacter: Object) => {
   return {
     type: 'FETCH_CHARACTER',
-    payload: { SelectedCharacter },
+    payload: { selectedCharacter },
   };
 };

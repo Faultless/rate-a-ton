@@ -11,13 +11,13 @@ export default function characters(
   action: {
     type: string;
     payload: {
-      Characters: Array<{ id: string; name: string }> | null;
+      characters: Array<{ id: string; name: string }> | null;
     };
   },
 ): Object {
   switch (action.type) {
     case 'FETCH_CHARACTERS': {
-      const filteredCharacters = action.payload.Characters.filter(
+      const filteredCharacters = action.payload.characters.filter(
         character =>
           state.findIndex(searchCharacter =>
             idsAreEqual(character, searchCharacter),

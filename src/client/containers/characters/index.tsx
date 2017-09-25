@@ -16,7 +16,11 @@ const mapDispatchToProps = dispatch => {
   return {
     onItemClick: (id: string) => {
       getHeroById(id).then(result => {
-        dispatch(fetchCharacter(result.data));
+        dispatch(
+          fetchCharacter(
+            result.data.data.results[Object.keys(result.data.data.results)[0]],
+          ),
+        );
       });
     },
   };

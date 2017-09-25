@@ -8,9 +8,9 @@ const App = () => (
   <div>
     <button
       onClick={() =>
-        getHeroes().then(result =>
-          store.dispatch(fetchCharacters(result.data.Characters)),
-        )}
+        getHeroes().then(result => {
+          store.dispatch(fetchCharacters(result.data.data.results));
+        })}
     >
       Find your Heroes!
     </button>
