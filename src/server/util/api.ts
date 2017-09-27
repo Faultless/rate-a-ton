@@ -10,7 +10,7 @@ export const getHeroes = async (): Promise<AxiosResponse> => {
   const ts: string = timestamp.now().toString();
   const hash: string = md5(`${ts}${PRIVATE_KEY}${API_KEY}`);
   return await axios.get(
-    `/characters?orderBy=modified&limit=150&ts=${ts}&apikey=${API_KEY}&hash=${hash}`,
+    `/characters?orderBy=name&limit=100&ts=${ts}&apikey=${API_KEY}&hash=${hash}`,
   );
 };
 

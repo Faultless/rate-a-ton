@@ -23,11 +23,7 @@ export default function characters(
             idsAreEqual(character, searchCharacter),
           ) === -1,
       );
-      const newState = Object.assign(
-        {},
-        state,
-        state.concat(filteredCharacters),
-      );
+      const newState = state.concat(filteredCharacters);
       return newState;
     }
     default:

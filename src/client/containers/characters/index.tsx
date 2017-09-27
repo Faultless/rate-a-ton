@@ -5,10 +5,10 @@ import List from '../../components/list';
 import { getCharacter } from '../../util';
 
 const mapStateToProps = (state: {
-  characters: Array<{ id: number; name: string }>;
+  searchedCharacters: Array<{ id: number; name: string }>;
 }) => {
   return {
-    characters: state.characters,
+    characters: state.searchedCharacters,
   };
 };
 

@@ -11,3 +11,13 @@ export const fetchCharacter = (selectedCharacter: Object) => {
     payload: { selectedCharacter },
   };
 };
+
+export const searchCharacters = (
+  searchStr: string,
+  characters: Array<Object>,
+) => {
+  return {
+    type: 'SEARCH_CHARACTERS',
+    payload: { characters, searchStr },
+  };
+};
