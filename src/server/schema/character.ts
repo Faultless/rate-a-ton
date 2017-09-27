@@ -3,6 +3,7 @@ const Character = `
     id: Int!
     name: String!
     description: String
+    image: String
   }
 `;
 

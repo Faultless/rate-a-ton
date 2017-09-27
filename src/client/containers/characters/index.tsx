@@ -2,9 +2,10 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { fetchCharacter } from '../../actions';
 import List from '../../components/list';
+import { getCharacter } from '../../util';
 
 const mapStateToProps = (state: {
-  characters: Array<{ id: string; name: string }>;
+  characters: Array<{ id: number; name: string }>;
 }) => {
   return {
     characters: state.characters,
@@ -13,15 +14,10 @@ const mapStateToProps = (state: {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onItemClick: (id: string) => {
-      // getHeroById(id).then(result => {
-      //   dispatch(
-      //     fetchCharacter(
-      //       result.data.data.results[Object.keys(result.data.data.results)[0]],
-      //     ),
-      //   );
-      // });
-      console.log(id);
+    onItemClick: (id: number) => {
+      getCharacter(id).then(result => {
+        dispatch(fetchCharacter(result.data.data.getCharacter));
+      });
     },
   };
 };

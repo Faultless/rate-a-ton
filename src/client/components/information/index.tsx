@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { API_KEY } from '../../../shared/config';
+const styles = require('./index.css');
 
 const Information = (props: { selectedCharacter: any }) => (
   <div>
     <p>name: {props.selectedCharacter.name}</p>
     <br />
-    {props.selectedCharacter.thumbnail && (
+    {props.selectedCharacter.image && (
       <img
-        src={`${props.selectedCharacter.thumbnail.path}.${props
-          .selectedCharacter.thumbnail.extension}?apikey=${API_KEY}`}
+        className={styles.thumbnail}
+        src={props.selectedCharacter.image}
         alt={props.selectedCharacter.name}
       />
     )}
