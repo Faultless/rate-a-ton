@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { fetchCharacter } from '../../actions';
-import { getHeroById } from '../../util/api';
 import List from '../../components/list';
 
 const mapStateToProps = (state: {
@@ -15,13 +14,14 @@ const mapStateToProps = (state: {
 const mapDispatchToProps = dispatch => {
   return {
     onItemClick: (id: string) => {
-      getHeroById(id).then(result => {
-        dispatch(
-          fetchCharacter(
-            result.data.data.results[Object.keys(result.data.data.results)[0]],
-          ),
-        );
-      });
+      // getHeroById(id).then(result => {
+      //   dispatch(
+      //     fetchCharacter(
+      //       result.data.data.results[Object.keys(result.data.data.results)[0]],
+      //     ),
+      //   );
+      // });
+      console.log(id);
     },
   };
 };

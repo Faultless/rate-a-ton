@@ -3,19 +3,23 @@ import Characters from './containers/characters';
 import CharacterInfo from './containers/character-info';
 import store from './store';
 import { fetchCharacters } from './actions';
-import { getHeroes } from './util/api';
+import { getCharacters } from './util';
+const styles = require('./app.css');
+
 const App = () => (
   <div>
     <button
       onClick={() =>
-        getHeroes().then(result => {
-          store.dispatch(fetchCharacters(result.data.data.results));
+        getCharacters().then(result => {
+          store.dispatch(fetchCharacters(result.data.data.characters));
         })}
     >
       Find your Heroes!
     </button>
-    <Characters />
-    <CharacterInfo />
+    <div className={styles.mainContainer}>
+      <Characters />
+      <CharacterInfo />
+    </div>
   </div>
 );
 

@@ -42,6 +42,7 @@ export default {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
+  devtool: 'inline-source-map',
   devServer: {
     port: 7000,
     hot: true,
