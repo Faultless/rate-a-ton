@@ -4,6 +4,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
 import store from './store';
 import App from './app';
+import './index.global.css';
 
 const rootElement = document.getElementById('root');
 

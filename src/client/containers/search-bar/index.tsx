@@ -1,7 +1,10 @@
 import * as React from 'react';
+const styles = require('./index.css');
 
 const SearchBar = (props: { searchCharacters: Function }) => (
-  <input onChange={(event: any) => props.searchCharacters(event)} />
+  <div className={styles.input}>
+    <input onChange={(event: any) => props.searchCharacters(event)} />
+  </div>
 );
 
 export default SearchBar;

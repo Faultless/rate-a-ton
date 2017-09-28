@@ -11,6 +11,7 @@ class App extends React.Component {
   componentWillMount() {
     getCharacters().then(result => {
       store.dispatch(fetchCharacters(result.data.data.characters));
+      store.dispatch(searchCharacters('', result.data.data.characters));
     });
   }
 

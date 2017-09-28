@@ -28,6 +28,19 @@ exports["default"] = {
                         },
                         'postcss-loader',
                     ]
+                })),
+                exclude: /\.global.css$/
+            },
+            {
+                test: /\.global.css$/,
+                use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: { importLoaders: 1, modules: false }
+                        },
+                        'postcss-loader',
+                    ]
                 }))
             },
         ]

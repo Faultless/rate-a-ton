@@ -1,5 +1,6 @@
 import { API_KEY } from '../../shared/config';
 import { getHeroes, getHeroById } from '../util/api';
+import { db } from '../index';
 
 class Character {
   id: number;
@@ -28,13 +29,18 @@ const Resolvers = {
       newCharacters = result.data.data.results.map(
         characterData => new Character(characterData),
       );
+      db.defaults({ characters: newCharacters }).write();
       return newCharacters;
     });
   },
-  getCharacter: (args: { characterId: number }) => {
-    return getHeroById(args.characterId.toString()).then(
-      result => new Character(result.data.data.results[0]),
-    );
+  getCharacter: ({ characterId }: { characterId: number }) => {
+    // return getHeroById(characterId.toString()).then(
+    //   result => new Character(result.data.data.results[0]),
+    // );
+    return db
+      .get('characters')
+      .find({ id: characterId })
+      .value();
   },
 };
 

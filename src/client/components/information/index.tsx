@@ -3,9 +3,8 @@ import { API_KEY } from '../../../shared/config';
 const styles = require('./index.css');
 
 const Information = (props: { selectedCharacter: any }) => (
-  <div>
-    <p>name: {props.selectedCharacter.name}</p>
-    <br />
+  <div className={styles.infoContainer}>
+    <p className={styles.name}>name: {props.selectedCharacter.name}</p>
     {props.selectedCharacter.image && (
       <img
         className={styles.thumbnail}

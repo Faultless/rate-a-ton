@@ -4,7 +4,6 @@ export default function selectedCharacter(
 ): Object {
   switch (action.type) {
     case 'FETCH_CHARACTER':
-      console.log(action.payload);
       const newState = Object.assign(
         {},
         state,

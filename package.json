@@ -4,8 +4,7 @@
   "description": "A superheroes rating app",
   "main": "index.js",
   "scripts": {
-    "start":
-      "cd src/server && nodemon -e ts,tsx --ignore lib --ignore dist --exec ts-node index.ts",
+    "start": "cd src/server && nodemon -e ts,tsx --ignore lib --ignore dist --exec ts-node index.ts",
     "wds:start": "tsc && webpack-dev-server -p",
     "lint": "tslint src webpack.config.ts --ext .ts,.tsx",
     "test": "npm run lint && jest -w --coverage"
@@ -29,6 +28,7 @@
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.3",
     "jest": "^21.1.0",
+    "lowdb": "^1.0.0",
     "md5": "^2.2.1",
     "ramda": "^0.24.1",
     "react": "^15.6.1",

@@ -16,7 +16,6 @@ export default function searchedCharacters(
         .toLowerCase()
         .includes(action.payload.searchStr.toLowerCase()),
     );
-    console.log(filterCharacters);
     return filterCharacters;
   }
   return state;
