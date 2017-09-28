@@ -23,6 +23,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div>
+          All content is provided by the{' '}
+          <a href="https://developer.marvel.com/" target="_blank">
+            Marvel API
+          </a>
+        </div>
+        <br />
         <SearchBar searchCharacters={this.searchChars} />
         <div className={styles.mainContainer}>
           <Characters />
