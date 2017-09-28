@@ -21,3 +21,14 @@ export const searchCharacters = (
     payload: { characters, searchStr },
   };
 };
+
+export const setRating = (
+  characters: Array<Object>,
+  characterId: number,
+  rating: number,
+) => {
+  return {
+    type: 'SET_RATING',
+    payload: { characters, characterId, rating },
+  };
+};

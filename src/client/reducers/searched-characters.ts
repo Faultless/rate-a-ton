@@ -3,7 +3,7 @@ export default function searchedCharacters(
   action: {
     type: string;
     payload: {
-      characters: Array<{ id: number; name: string }> | null;
+      characters: Array<{ id: number; name: string; rating: number }> | null;
       searchStr: string;
     };
   },

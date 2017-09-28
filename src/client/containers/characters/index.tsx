@@ -5,7 +5,7 @@ import List from '../../components/list';
 import { getCharacter } from '../../util';
 
 const mapStateToProps = (state: {
-  searchedCharacters: Array<{ id: number; name: string }>;
+  searchedCharacters: Array<{ id: number; name: string; rating: string }>;
 }) => {
   return {
     characters: state.searchedCharacters,

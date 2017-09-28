@@ -19,3 +19,27 @@
   vertical-align: bottom;
   margin-right: 20px;
 }
+
+.rating {
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.ratingList {
+  display: inline-block;
+}
+
+.ratingList li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 3px;
+  background: #269287;
+  color: white;
+  transition: all 200ms ease-in-out;
+  margin: 0 3px;
+}
+
+.ratingList li:hover {
+  color: #269287;
+  background: white;
+}
