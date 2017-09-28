@@ -5,6 +5,7 @@ const Character = `
     name: String!
     description: String
     image: String
+    rating: Int
   }
 `;
 
